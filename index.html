@@ -10,9 +10,11 @@
 </html>
 <script type="text/python">
     from browser import document
+    from browser.widgets.dialog import InfoDialog
+
 
     def alert(event):
-        print("오잉??")
+        InfoDialog("Hello", "버튼이 눌렸다!")
     
     document["test-button"].bind("click", alert)
 
