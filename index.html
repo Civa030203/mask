@@ -1,21 +1,19 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython_stdlib.min.js"></script>
-    </head>
-    <body onload="brython()">
-        <button id='test-button'>눌러봐요</button>
-
-    </body>
-</html>
-<script type="text/python">
-    from browser import document
-    from browser.widgets.dialog import InfoDialog
-
-
-    def alert(event):
-        InfoDialog("Hello", "버튼이 눌렸다!")
+  <head>
+    <!-- brython 가져오기 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython_stdlib.min.js"></script>
     
-    document["test-button"].bind("click", alert)
+    <!-- python 파일 사용하기 -->
+    <script type="text/python" src="script/python.py"></script>
+	
+    <!-- css 파일 가져오기 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
 
-</script>
+<body onload="brython()">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <button id='test-button'>파이썬 구동 확인</button>	
+</body>
+</html>
